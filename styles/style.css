@@ -1,0 +1,249 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  .container {
+    padding: 0px 20px;
+    max-width: 1120px;
+    margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p{
+  padding: 0;
+  margin: 0;
+  color: #1B1C21;
+}
+body{
+  margin: 0;
+}
+h2{
+  font-weight: 700;
+  font-family: "TT Lakes",sans-serif;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: -0.6000000238418579px;
+}
+h3{
+  font-weight: 600;
+  font-family: TT Lakes;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.20000000298023224px;
+}
+p{
+  font-weight: 500;
+  font-family: TT Lakes;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.20000000298023224px;
+}
+.header__nav {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #D9FFF5;
+}
+.nav__leftside{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+.leftside__burger {
+  padding-right: 15px;
+}
+.logo__img {
+  padding-right: 15px;
+}
+.nav__plank{
+  background: #EAEAEA;
+  width: 3px;
+  height: 32px;
+}
+.features__contacts {
+  display: none;
+}
+.nav__features {
+  display: flex;
+  align-items: center;
+}
+.features_imgs{
+  display: flex;
+}
+.nav__features .nav__plank{
+  display: none;
+}
+.features__img {
+  margin-right: 10px;
+}
+.features__img:last-child {
+  margin-right:5;
+}
+@media screen and (width>=768px) {
+  .leftside__burger {
+    order: 0;
+  }
+  .nav__leftside .nav__plank{
+    order: 1;
+  }
+  .leftside__logo {
+    order: 2;
+    padding-right: 0;
+    padding-left: 15px;
+  }
+  .nav__features .nav__plank{
+    display: inline;
+  }
+  .features__contacts{
+    display:flex;
+    gap:15px
+  }
+  .contacts__img:last-child{
+    margin-right: 20px;
+  }
+  .features_imgs{
+    margin-left: 15px;
+    gap:5px;
+  }
+}
+@media screen and (width>=1120px){
+  .header{
+    display: none;
+  }
+}
+.main-container{
+  background-color: #F8F8F8;
+  height: 100vh;
+}
+.main__services {
+  padding-top: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.services__top {
+  display: flex;
+align-items: center;
+justify-content: space-between;
+}
+.top__btns {
+  display: none;
+}
+.top__btn {
+  background: inherit;
+  border: none;
+  display: flex;
+  align-items: center;
+}
+.top__h3 {
+  margin-right: 10px;
+}
+.top__h2 {
+  margin-bottom: 20px;
+  color: #1B1C21;
+}
+.top__h2::before{
+    content: "";
+    position: absolute;
+    height: 40px;
+    width: 4px;
+    left: 0;
+    background-color: #41F6D7;
+    border-radius: 0px 10px 10px 0px;
+}
+.services__scroll {
+  display: flex;
+  overflow: auto;
+  gap:5px;
+}
+.services__scroll::-webkit-scrollbar{
+  width: 0;
+}
+.scroll__item{
+  background: inherit;
+  border: none;
+}
+.item__h3 {
+  color: #7E7E82;
+  white-space: nowrap;
+  padding: 10px 10px;
+  border: 3px solid transparent;
+}
+.item__h3:hover{
+  border: 3px solid #B8FFEC;
+  border-radius: 6px;
+  transition: 0.8s;
+}
+@media screen and (width>=1120px){
+  .top__btns {
+    display: flex;
+  }
+  .top__h2::before{
+    content: url("../img/highlight.svg");
+    position: relative;
+    height: 1px;
+    width:  4px;
+    left:-20px
+}
+  
+} 
+.content__p {
+  margin-bottom: 20px;
+}
+.content__p:last-child{
+  display: none;
+}
+.content__h3 {
+  color: #1B1C21;
+}
+.content__h3::before {
+  content:url(../img/icon.svg);
+  margin-right: 20px;
+  padding-left: 10px;
+}
+.content__img {
+  margin-top: 20px;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  object-fit: cover;
+  object-position: bottom;
+}
+.content__span{
+  display: none;
+}
+@media screen and (width>=768px){
+  .hero__content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .content__img{
+    width: 360px;
+    object-position: right;
+    position: relative;
+    border-radius: 15px;
+  }
+  .content__text{
+    padding-right: 58px;
+  }
+}
+@media screen and (width>=1120px){
+  .content__img{
+    width: 532px;
+    height: 307px;
+  }
+  .hero__content{
+    align-items: start;
+  }
+  .content__img{
+    margin-top: 0;
+  }
+  .main__hero{
+    margin-top: 40px;
+  }
+  .content__span{
+    display: inline;
+  }
+}
